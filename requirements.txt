@@ -9,4 +9,3 @@ requests
 xarray
 scripy
 netCDF4
-cartopy
