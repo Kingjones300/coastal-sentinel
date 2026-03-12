@@ -8,4 +8,3 @@ streamlit-folium
 requests
 xarray
 scripy
-netCDF4
