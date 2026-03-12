@@ -6,3 +6,7 @@ matplotlib
 folium
 streamlit-folium
 requests
+xarray
+scripy
+netCDF4
+cartopy
