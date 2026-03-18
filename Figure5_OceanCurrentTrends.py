@@ -37,8 +37,8 @@ COAST_COLOR  = '#555555'
 BORDER_COLOR = '#888888'
 ARROW_COLOR  = '#1A1A1A'
 QUIVER_STEP  = 3
-QUIVER_SCALE = 3.5
-QUIVER_WIDTH = 0.0022
+QUIVER_SCALE = 1.5
+QUIVER_WIDTH = 0.004
 SIGMA        = 1.8
 
 def load_annual_mean(filepath, year, basin, avgs):
