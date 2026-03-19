@@ -69,10 +69,10 @@ coastal-sentinel/
 │   ├── fdi_calculator.py          # FDI retrieval and threshold pipeline
 │   ├── skill_score.py             # Skill score and Pearson r validation
 │   ├── risk_index.py              # Composite risk index R calculation
-│   ├── figure_s1_fdi_sensitivity.py  # Figure 12 — ROC/sensitivity 4-panel plot
+│   ├── figure_3_fdi_sensitivity.py  # Figure 12 — ROC/sensitivity 4-panel plot
 │   └── dashboard.py               # Streamlit operational dashboard
 ├── supplementary/
-│   ├── figure_s1_fdi_sensitivity.py  # Python script for Figure 12 (ROC plot)
+│   ├── figure_3_fdi_sensitivity.py  # Python script for Figure 12 (ROC plot)
 │   └── Table_4_FDI_sensitivity.csv   # FDI threshold sensitivity data (0.03–0.08)
 ├── data/
 │   ├── coordinates/               # River mouth source coordinates (Table 1)
