@@ -1,5 +1,5 @@
 """
-Figure S1: FDI Threshold Sensitivity Analysis
+Figure 3: FDI Threshold Sensitivity Analysis
 Coastal Sentinel - Supplementary Information Figure
 Generates ROC-style sensitivity plot showing detection rate vs. false-positive
 rate across FDI thresholds 0.03-0.08, plus debris area and scene detection curves.
@@ -139,15 +139,15 @@ ax4.legend(handles=legend_elements, fontsize=8, framealpha=0.8)
 
 # ── Main title ────────────────────────────────────────────────────────────────
 fig.suptitle(
-    'Figure S1. FDI Threshold Sensitivity Analysis (Thresholds 0.03–0.08)\n'
+    'Figure 3. FDI Threshold Sensitivity Analysis (Thresholds 0.03–0.08)\n'
     'Coastal Sentinel | South China Sea & Bay of Bengal | January 2019 – December 2023',
     fontsize=11, fontweight='bold', color='#0D2D5E', y=0.975
 )
 
 # ── Save ──────────────────────────────────────────────────────────────────────
-plt.savefig('Figure_S1_FDI_Sensitivity.png',  dpi=300, bbox_inches='tight',
+plt.savefig('Figure_3_FDI_Sensitivity.png',  dpi=300, bbox_inches='tight',
             facecolor='white', edgecolor='none')
-plt.savefig('Figure_S1_FDI_Sensitivity.tiff', dpi=600, bbox_inches='tight',
+plt.savefig('Figure_3_FDI_Sensitivity.tiff', dpi=600, bbox_inches='tight',
             facecolor='white', edgecolor='none')
 plt.close()
-print("Saved: Figure_S1_FDI_Sensitivity.png (300 dpi) and .tiff (600 dpi)")
+print("Saved: Figure_3_FDI_Sensitivity.png (300 dpi) and .tiff (600 dpi)")
