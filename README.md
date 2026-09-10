@@ -55,28 +55,28 @@ All results validated against independent real-world data (92 NOAA Global Drifte
 
 ```
 coastal-sentinel/
-|-- scripts/
-|   |-- Figure2.py                    Study domain and river-mouth source map
-|   |-- Figure3.py                    FDI threshold sensitivity analysis
-|   |-- Figure4.py                    FDI detection maps (SCS and BoB)
-|   |-- Figure5.py                    Monthly surface current speed distribution
-|   |-- Figure6.py                    Lagrangian drift trajectory maps
-|   |-- Figure7.py                    Composite risk maps
-|   |-- Figure9.py                    Monthly FDI detection frequency
-|   |-- Figure10.py                   Cross-basin correlation analysis
-|   |-- Figure11.py                   Ensemble spread analysis
-|   |-- Figure12.py                   Coastline risk exposure by category
-|   |-- Drift_simulation.py           OpenDrift ensemble runner (70 runs)
-|   |-- Risk_index.py                 Composite risk index calculation
-|   |-- Skill_score.py                Forecast skill and lag-correlation validation
-|   `-- fdi_calculator.py             FDI computation utilities
-|-- data/
-|   |-- Fig2_FDI_Detection_GEE.js     Google Earth Engine FDI detection script
-|   |-- M1_download_gdp_drifters.py   GDP drifter data acquisition
-|   `-- M1_gdp_hindcast.py            Real drifter validation hindcast
-|-- dashboard.py                      Streamlit operational dashboard
-|-- requirements.txt                  Python dependencies
-`-- README.md
+├── scripts/
+│   ├── Figure2.py                    Study domain and river-mouth source map
+│   ├── Figure3.py                    FDI threshold sensitivity analysis
+│   ├── Figure4.py                    FDI detection maps (SCS and BoB)
+│   ├── Figure5.py                    Monthly surface current speed distribution
+│   ├── Figure6.py                    Lagrangian drift trajectory maps
+│   ├── Figure7.py                    Composite risk maps
+│   ├── Figure9.py                    Monthly FDI detection frequency
+│   ├── Figure10.py                   Cross-basin correlation analysis
+│   ├── Figure11.py                   Ensemble spread analysis
+│   ├── Figure12.py                   Coastline risk exposure by category
+│   ├── Drift_simulation.py           OpenDrift ensemble runner (70 runs)
+│   ├── Risk_index.py                 Composite risk index calculation
+│   ├── Skill_score.py                Forecast skill and lag-correlation validation
+│   └── fdi_calculator.py             FDI computation utilities
+├── data/
+│   ├── Fig2_FDI_Detection_GEE.js     Google Earth Engine FDI detection script
+│   ├── M1_download_gdp_drifters.py   GDP drifter data acquisition
+│   └── M1_gdp_hindcast.py            Real drifter validation hindcast
+├── dashboard.py                      Streamlit operational dashboard
+├── requirements.txt                  Python dependencies
+└── README.md
 ```
 
 -----
