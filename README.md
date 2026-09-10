@@ -55,25 +55,27 @@ All results validated against independent real-world data (92 NOAA Global Drifte
 
 ```
 coastal-sentinel/
-|-- Figure2.py                    Study domain and river-mouth source map
-|-- Figure3.py                    FDI threshold sensitivity analysis
-|-- Figure4.py                    FDI detection maps (SCS and BoB)
-|-- Figure5.py                    Monthly surface current speed distribution
-|-- Figure6.py                    Lagrangian drift trajectory maps
-|-- Figure7.py                    Composite risk maps
-|-- Figure9.py                    Monthly FDI detection frequency
-|-- Figure10.py                   Cross-basin correlation analysis
-|-- Figure11.py                   Ensemble spread analysis
-|-- Figure12.py                   Coastline risk exposure by category
-|-- Drift_simulation.py           OpenDrift ensemble runner (70 runs)
-|-- Fig2_FDI_Detection_GEE.js     Google Earth Engine FDI detection script
-|-- Risk_index.py                 Composite risk index calculation
-|-- Skill_score.py                Forecast skill and lag-correlation validation
-|-- fdi_calculator.py             FDI computation utilities
-|-- M1_download_gdp_drifters.py   GDP drifter data acquisition
-|-- M1_gdp_hindcast.py            Real drifter validation hindcast
-|-- dashboard.py                  Streamlit operational dashboard
-|-- requirements.txt              Python dependencies
+|-- scripts/
+|   |-- Figure2.py                    Study domain and river-mouth source map
+|   |-- Figure3.py                    FDI threshold sensitivity analysis
+|   |-- Figure4.py                    FDI detection maps (SCS and BoB)
+|   |-- Figure5.py                    Monthly surface current speed distribution
+|   |-- Figure6.py                    Lagrangian drift trajectory maps
+|   |-- Figure7.py                    Composite risk maps
+|   |-- Figure9.py                    Monthly FDI detection frequency
+|   |-- Figure10.py                   Cross-basin correlation analysis
+|   |-- Figure11.py                   Ensemble spread analysis
+|   |-- Figure12.py                   Coastline risk exposure by category
+|   |-- Drift_simulation.py           OpenDrift ensemble runner (70 runs)
+|   |-- Risk_index.py                 Composite risk index calculation
+|   |-- Skill_score.py                Forecast skill and lag-correlation validation
+|   `-- fdi_calculator.py             FDI computation utilities
+|-- data/
+|   |-- Fig2_FDI_Detection_GEE.js     Google Earth Engine FDI detection script
+|   |-- M1_download_gdp_drifters.py   GDP drifter data acquisition
+|   `-- M1_gdp_hindcast.py            Real drifter validation hindcast
+|-- dashboard.py                      Streamlit operational dashboard
+|-- requirements.txt                  Python dependencies
 `-- README.md
 ```
 
@@ -100,20 +102,22 @@ pip install rasterio
 
 External Accounts Required
 
-Service	Purpose	Registration
-Google Earth Engine	Sentinel-2 scene acquisition	signup
-Copernicus Marine Service (CMEMS)	GLORYS12V1 ocean reanalysis	register
-Copernicus Climate Change Service	ERA5 wind fields	register
+| Service | Purpose | Registration |
+|---|---|---|
+| Google Earth Engine | Sentinel-2 scene acquisition | https://earthengine.google.com |
+| Copernicus Marine Service (CMEMS) | GLORYS12V1 ocean reanalysis | https://marine.copernicus.eu |
+| Copernicus Climate Change Service | ERA5 wind fields | https://climate.copernicus.eu |
 
 Data Sources
 
-Dataset	Provider	Resolution	Purpose
-Sentinel-2 Level-2A	ESA / Copernicus Open Access Hub	10–20 m, 5-day revisit	FDI debris detection
-CMEMS GLORYS12V1	Copernicus Marine Service	1/12°, daily	Surface current fields
-ERA5 Global Reanalysis	ECMWF / Copernicus	0.25°, hourly	10-m wind fields for windage
-NOAA GDP drifter trajectories	NOAA (via OSMC ERDDAP)	—	Independent forecast validation
-Natural Earth	naturalearthdata.com	10 m	Coastline geometry for risk mapping
-ETOPO1 Global Relief Model	NOAA NGDC	~1.85 km	Bathymetry-based deep-water masking
+| Dataset | Provider | Resolution | Purpose |
+|---|---|---|---|
+| Sentinel-2 Level-2A | ESA / Copernicus Open Access Hub | 10-20 m, 5-day revisit | FDI debris detection |
+| CMEMS GLORYS12V1 | Copernicus Marine Service | 1/12 degree, daily | Surface current fields |
+| ERA5 Global Reanalysis | ECMWF / Copernicus | 0.25 degree, hourly | 10-m wind fields for windage |
+| NOAA GDP drifter trajectories | NOAA (via OSMC ERDDAP) | - | Independent forecast validation |
+| Natural Earth | naturalearthdata.com | 10 m | Coastline geometry for risk mapping |
+| ETOPO1 Global Relief Model | NOAA NGDC | ~1.85 km | Bathymetry-based deep-water masking |
 
 	•	Study period: January 2019 – December 2023
 	•	SCS domain: 0°–25°N, 100°–122°E
