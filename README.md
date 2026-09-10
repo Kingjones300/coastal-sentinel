@@ -53,6 +53,7 @@ All results validated against independent real-world data (92 NOAA Global Drifte
 
 ## Repository Structure
 
+```
 coastal-sentinel/
 ├── Figure2.py              # Study domain and river-mouth source map
 ├── Figure3.py              # FDI threshold sensitivity analysis
@@ -74,6 +75,7 @@ coastal-sentinel/
 ├── dashboard.py            # Streamlit operational dashboard
 ├── requirements.txt        # Python dependencies
 └── README.md
+```
 
 -----
 
