@@ -74,6 +74,17 @@ coastal-sentinel/
 │   ├── Fig2_FDI_Detection_GEE.js     Google Earth Engine FDI detection script
 │   ├── M1_download_gdp_drifters.py   GDP drifter data acquisition
 │   └── M1_gdp_hindcast.py            Real drifter validation hindcast
+├── figures/
+│   ├── Figure2.png
+│   ├── Figure3.png
+│   ├── Figure4.png
+│   ├── Figure5.png
+│   ├── Figure6.png
+│   ├── Figure7.png
+│   ├── Figure9.png
+│   ├── Figure10.png
+│   ├── Figure11.png
+│   └── Figure12.png
 ├── dashboard.py                      Streamlit operational dashboard
 ├── requirements.txt                  Python dependencies
 └── README.md
