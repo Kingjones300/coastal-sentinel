@@ -73,7 +73,7 @@ if region == "South China Sea":
         'East SCS':    (115.0, 18.0),
     }
     forecast_file = rf"C:\CoastalSentinel\Outputs\Results\SCS_{forecast_hours}hr_MultiPoint.nc"
-    LOCKED_AVG_SPEED = 0.164
+    LOCKED_AVG_SPEED = 0.241
     LOCKED_MAX_SPEED = 0.221
 else:
     current_file = r"C:\CoastalSentinel\Data\Ocean_Currents\BoB\BoB_Ocean_Currents_2019_2023.nc"
@@ -88,7 +88,7 @@ else:
         'Central BoB': (90.0, 12.0),
     }
     forecast_file = rf"C:\CoastalSentinel\Outputs\Results\BoB_{forecast_hours}hr_MultiPoint.nc"
-    LOCKED_AVG_SPEED = 0.144
+    LOCKED_AVG_SPEED = 0.260
     LOCKED_MAX_SPEED = 0.198
 
 
@@ -213,7 +213,7 @@ with col_map:
 
     if not drift_plotted:
         np.random.seed(forecast_hours)
-        spread_deg = {24: 5.74, 48: 8.92, 72: 12.11}[forecast_hours] / 111.0
+        spread_deg = {24: 6.28, 48: 7.11, 72: 8.35}[forecast_hours] / 111.0
         demo_lons = center_lon + np.random.randn(70) * spread_deg
         demo_lats = center_lat + np.random.randn(70) * spread_deg
         fig.add_trace(go.Scattergeo(
@@ -268,8 +268,8 @@ with col_info:
     st.markdown(f"""
 - **Average Speed:** {avg_speed:.4f} m/s
 - **Maximum Speed:** {max_speed:.4f} m/s
-- **Data Period:** 2014–2023
-- **Pearson r:** 0.651 (p < 0.001, n = 60)
+- **Data Period:** 2019–2023
+- **Pearson r:** 0.61 (2-month lag, p < 0.001, n = 58)
     """)
     st.markdown("---")
     st.subheader("⚠️ Alert Thresholds")
@@ -355,7 +355,7 @@ The Coastal Sentinel is an operational early warning system
 for marine plastic debris influx. It integrates:
 
 - Satellite remote sensing (Sentinel-2, Band B6)
-- Ocean current modelling (CMEMS, 2014–2023)
+- Ocean current modelling (CMEMS, 2019–2023)
 - Wind data (ERA5)
 - Particle drift simulation (OpenDrift)
 
@@ -363,8 +363,8 @@ for marine plastic debris influx. It integrates:
 arrival at coastal zones in the South China Sea and
 Bay of Bengal.
 
-**System specs:** 70 ensembles · 100 particles · 847 scenes
-· 12,500 km coastline · ~180M people protected
+**System specs:** 70 ensembles · 100 particles · 167,439 scenes screened
+· 2,160.5 km coastline at medium-to-high risk (14.4%)
     """)
 
 st.markdown("---")
